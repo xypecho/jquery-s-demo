@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		img{
+			cursor: pointer;
+		}
+		#bl{
+			display: none;
+		}
+		input[type=submit]{
+			border: 1px solid #ccc;
+
+		}
+	</style>
+</head>
+<body>
+	<form id="fm" action="http://www.baidu.com">
+		<p>name:</p>
+		<input type="file" name=""  placeholder="xypecho" id="bl">    <!-- type=file即选择文件按钮 -->
+		<p><img src="select.jpg"  id="im"></p>
+		<!-- <input type="submit" name="" value="ok"> -->
+		
+		
+	</form>
+
+		<button  id="submit">ok</button>
+		<button  id="reset">cancel</button>
+</body>
+
+		<script type="text/javascript">
+		blobj=document.getElementById("bl");
+		imobj=document.getElementById("im");
+		imobj.onclick=function(){
+			blobj.click();
+		}
+		blobj.onchange=function(){
+			s=this.value;
+			str=s.match(/\.(?=se)/ig);
+			//马克一下，正则表达式截取文件名未遂，过几天看看
+			alert(str);
+		}
+
+		
+		// s=file.replace(/^.+?\\([^\\]+?)(\.[^\.\\]*?)?$/gi,"$1");  //正则表达式获取文件名，不带后缀
+		// var FileExt=file.replace(/.+\./,"");   //正则表达式获取后缀
+
+
+
+		fmobj=document.getElementById("fm");
+		submitobj=document.getElementById("submit");
+		resetobj=document.getElementById("reset");
+		submitobj.onclick=function(){
+			fmobj.submit();
+		}
+		resetobj.onclick=function(){
+			fmobj.reset();
+		}
+		</script>
+</html>

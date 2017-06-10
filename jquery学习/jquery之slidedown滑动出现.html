@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript"  src="jquery-1.8.3.min.js"></script>
+	<style type="text/css">
+		h2{
+			display:none;            
+		}
+ 
+	</style>  
+</head>
+<body>
+	<p>try</p>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+</body>
+	<script type="text/javascript">
+		$("p").click(function(){
+			$("h2").slideDown();      //需要先给h2一个display none属性,slideUp是收起来,Toggle()是收起来放下去
+		});
+	</script>
+</html>

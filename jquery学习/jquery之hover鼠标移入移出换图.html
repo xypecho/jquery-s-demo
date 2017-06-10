@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<script type="text/javascript"  src='jquery-1.8.3.min.js'></script>
+	<style type="text/css">
+		.box{
+			margin: 0 auto;
+			width: 600px;
+			height: 400px;
+			overflow: hidden;
+			position: relative;
+
+		}
+		img{
+			width: 600px;
+			height: 400px;
+			position: absolute;
+		}
+		li{
+			list-style: none;
+			float: left;
+			width: 600px;
+			height: 400px;
+
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="box" id="box">
+		<ul id="img">
+			<li> <img src="t.jpg" > </li>
+			<li><img src="i.jpg"></li>
+			<li><img src="m.jpg" ></li>
+			<li><img src="g.jpg"></li>
+		</ul>
+	</div>
+</body>
+	<script >
+		$('img').hover(
+				function(){
+					this.src="t.jpg"
+				},
+				function(){
+					this.src="i.jpg"
+				}
+			);
+		
+	</script>
+
+</html>

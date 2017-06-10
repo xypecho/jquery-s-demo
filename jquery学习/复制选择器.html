@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script  src="jquery-1.8.3.min.js"></script>
+	<style type="text/css">
+		select{
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<form  action="javascript: ">
+		<select  name=""  size="2" id="s1">
+		<option  value="">Æ»¹û</option>
+		<option value="">Î÷¹Ï</option>
+		<option  value="">Ïã½¶</option>
+		<option  value="">Ã¢¹û</option>
+		</select>
+		<input type="button" value=">>"  id="btn">
+		<select name=""   size="2"  id="s2">
+		</select>
+	</form>
+</body>
+<script>
+$("#btn").click(function(){
+$("#s1  option:selected").clone().appendTo("#s2");
+	});
+</script> 
+
+	
+</html>

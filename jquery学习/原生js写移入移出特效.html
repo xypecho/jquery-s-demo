@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		h2{
+		cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+		<h2>hello world</h2>
+		<h2>hello world</h2>
+		<h2>hello world</h2>
+		<h2>hello world</h2>
+		<h2>hello world</h2>
+</body>
+		<script type="text/javascript">
+			hobj=document.getElementsByTagName("h2");
+			for (i=0;i<hobj.length;i++) {
+			hobj[i].onmouseenter=function(){
+				this.style.background="red";
+			}
+			hobj[i].onmouseout=function(){
+				this.style.background="white";
+			}
+			}
+			
+		</script>
+</html>

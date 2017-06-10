@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+	<h2>hello world</h2>
+</body>
+	<script type="text/javascript">
+		$("h2").each(function(i){
+			$("h2").get()[i].setAttribute("class",i+1);       //给每一个h2加个class属性，兼每个class名字为1-10
+		});
+		$("h2").click(function(){
+			this.innerHTML=this.getAttribute("class");
+		});
+
+	</script>
+</html>

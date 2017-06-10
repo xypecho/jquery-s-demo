@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+		<p>name:</p>
+		<input type="text" name=""  placeholder="xypecho" id="bl">
+		<p>password:</p>
+		<input type="text" name="" placeholder="******">
+	</form>
+</body>
+		<script type="text/javascript">
+		blobj=document.getElementById("bl");
+		
+		blobj.onkeydown=function(event){
+		kc=event.keyCode;		//获取键盘参数
+		document.title=kc;
+			if (kc==32){		//获取空格的参数
+				this.blur();     //ps：if后面的圆括号与花括号直接不能有空格
+			}
+		}
+		
+			// this.focus();
+	
+
+		</script>
+</html>

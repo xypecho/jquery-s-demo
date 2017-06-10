@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		select{
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<select id="s1" size="2">
+			<option value="苹果">苹果</option>
+			<option value="菠萝">菠萝</option>
+			<option value="香蕉">香蕉</option>
+			<option value="芒果">芒果</option>
+		</select>
+		<input type="button" name=""  id="btn"  value=">>"> 
+		<select id="s2"  size="2" value="">
+		</select>
+	</form>
+</body>
+	<script type="text/javascript">
+		s1obj=document.getElementById("s1");
+		s2obj=document.getElementById("s2");
+		btnobj=document.getElementById("btn");
+		ops=s1.options;
+		op=s2.options;
+		btnobj.onclick=function(){
+			idx=s1.selectedIndex;         //获取所选option的索引；即数字
+			// s2obj.innerHTML+=ops[idx].outerHTML;
+
+			for (i=0;i<op.length;i++) {
+				if (ops[idx]==op[i]) {
+					return false;
+				} else {
+					s2obj.innerHTML+=ops[idx].outerHTML;
+				}
+			}
+		}
+	</script>
+</html>

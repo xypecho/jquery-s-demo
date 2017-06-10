@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		img{
+			cursor: pointer;
+		}
+		#bl{
+			display: none;
+		}
+		input[type=submit]{
+			border: 1px solid #ccc;
+
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<p>name:</p>
+		<input type="file" name=""  placeholder="xypecho" id="bl">    <!-- type=file即选择文件按钮 -->
+		<p><img src="select.jpg"  id="im"></p>
+		<input type="submit" name="" value="ok">
+		
+	</form>
+</body>
+		<script type="text/javascript">
+		blobj=document.getElementById("bl");
+		imobj=document.getElementById("im");
+		imobj.onclick=function(){
+			blobj.click();
+		}
+		blobj.onchange=function(){
+			s=this.value;
+			str=s.match(/.+\/(.+)$/);
+			alert(str);
+		}
+		</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table width="700px" border="1px" id="te">             <!--表格变换属性无需使用style-->
+		<tr >
+			<td>a</td>
+			<td>a</td>
+			<td>a</td>
+		</tr>
+		<tr>
+			<td>b</td>
+			<td>b</td>
+			<td>b</td>
+		</tr>
+		<tr>
+			<td>c</td>
+			<td>c</td>
+			<td>c</td>
+		</tr>
+	</table>
+	<form action="javascript:">
+		<p>??<input type="" name=""  id="rows">  ?</p>
+		<p>??<input type="" name=""  id="cells"> ??/p>
+		<p><input type="button" value ="??? id="xg"></p>
+	</form>
+</body>
+	<script type="text/javascript">
+		teobj=document.getElementById("te");
+		rowsobj=document.getElementById("rows");
+		cellsobj=document.getElementById("cells");
+		xgobj=document.getElementById("xg");
+		xgobj.onclick=function(){
+			rowsobj=rowsobj.value;
+			cellsobj=cellsobj.value;
+			set(rowsobj,cellsobj);
+			
+		}
+		function set (i,j){
+			teobj=document.getElementById("te");
+			teobj.rows[i-1].cells[j-1].innerHTML="hello";
+		}
+	</script>
+</html>

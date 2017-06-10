@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript"  src="jquery-1.8.3.min.js" ></script>
+	<style type="text/css">
+		.menu{
+			background-color: #ccc;
+			height: 60px;
+			
+		}
+		.menu ul li{
+			list-style-type: none;
+			float: left;
+			margin-left: 60px;
+			line-height: 60px;
+			cursor: pointer;
+			width: 200px;
+			text-align: center;
+		}
+		.menu ul li:hover{
+			background-color: red;
+		}
+		.info{
+			background-color: #ccc;
+			height: 400px;
+			padding: 15px;
+			overflow: hidden;
+		}
+		.info  p{
+			display: none;
+		}
+		.info p:first-child{
+			display: block;
+		}         
+ 	</style>
+</head>
+<body>
+	<div class="menu">	
+		<ul>
+			<li>javascript</li>
+			<li>php</li>
+			<li>java</li>
+		</ul>
+	</div>
+
+
+	<div class="info">
+		<p>javascript is very much!  javascript is very much!</p>
+		<p>php is very much! php is very much! php is very much!</p>
+		<p>java is very much!    java is very much!     java is very much!      java is very much!</p>
+	</div>
+</body>
+	<script type="text/javascript">
+		
+		$(".menu li").eq(0).css({"background-color":"red"});    //网站进去默认显示在第一个即第一个的背景颜色为红色
+		$(".menu    li").click(function(){
+			$(this).css({"background-color":"red"});
+			$(".menu li").not($(this)).css({"background-color":"#ccc"});   //默认显示的下面的内容
+
+			idx=$(this).index(".menu li");          //获取当前li的位置
+			// window.location.href="http://www.baidu.com"
+			$(".info p").eq(idx).show();
+			$(".info p").not($(".info p").eq(idx)).hide();
+		});
+
+	</script>
+</html>

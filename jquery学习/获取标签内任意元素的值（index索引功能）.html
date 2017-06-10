@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+		<select id="se">
+		<option value="北京"  order="1">北京</option>
+		<option value="上海"  order="3">上海</option>
+		<option value="广州" order="5">广州</option>
+		<option value="深圳" order="7">深圳</option>
+		</select>
+
+		<button id="bt">确定</button>
+</body>
+		<script type="text/javascript">
+			seobj=document.getElementById("se");          
+			btobj=document.getElementById("bt");
+		btobj.onclick=function(){
+			idx=seobj.selectedIndex;		 //获取选择的索引,即被选中的人在里面排第几个
+			opts=seobj.options;		//获取里面所有的option选项
+			// alert(opts[idx].value);		//输出选中的索引的默认值
+			alert(opts[idx].getAttribute("order"));  //获取options里面的order的值
+		}
+			
+		</script>
+</html>

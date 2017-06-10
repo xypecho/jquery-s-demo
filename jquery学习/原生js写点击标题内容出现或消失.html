@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>linux</h2>
+	<p>linux is bad  linux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is bad</p>
+	<h2>linux</h2>
+	<p>linux is bad  linux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is bad</p>
+	<h2>linux</h2>
+	<p>linux is bad  linux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is badlinux is bad</p>
+</body>
+	<script type="text/javascript">
+		hobj=document.getElementsByTagName("h2");
+		pobj=document.getElementsByTagName("p");
+
+		for (i=0;i<hobj.length;i++) {
+			hobj[i].setAttribute("line", i);
+			hobj[i].setAttribute("num", 0);
+			pobj[i].id=i;
+			hobj[i].onclick=function(){
+				num=parseInt(this.getAttribute("num"));
+				line=this.getAttribute("line");
+				pi=document.getElementById(line);
+				if (num%2==0) {
+					pi.style.display = 'block'; 
+				} else {
+					pi.style.display = 'none'; 
+				}
+			this.setAttribute("num", num+1);
+			
+			}
+		}
+	</script>
+</html>

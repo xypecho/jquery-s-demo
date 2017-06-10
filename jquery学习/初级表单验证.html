@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<style type="text/css">
+		span{
+			display: none;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<form action="reg.php">
+		<p>用户名：</p>
+		<p>
+			<input type="text" name="username" class="auth">
+			<span>用户名至少6位</span>
+		</p>
+		<p>密码</p>
+		<p>
+			<input type="password" name="password" class="auth">
+			<span>密码至少8位数</span>
+		</p>
+		<p>确认密码</p>
+		<p>
+			<input type="password" name="repassword" class="auth">
+			<span>两次密码不一致</span>
+		</p>
+
+		<p>
+			<input type="submit" name="" value="ok"></p>
+	</form>
+</body>
+	<script type="text/javascript">
+		$("input[name=username]").blur(function(){
+			val=this.value
+			if (val<6) {
+				$(this).next().show();
+			}else {
+				$(this).next().hide()
+			}
+		})
+
+		$("input[name=password]").blur(function(){
+			val=this.value
+			if (val<8) {
+				$(this).next().show();
+			}else {
+				$(this).next().hide()
+			}
+		})
+
+		$("input[name=repassword]").blur(function(){
+			val=this.value
+			val2=$("input[name=password]").val();
+			if (val!=val2) {
+				$(this).next().show();
+			}else {
+				$(this).next().hide()
+			}
+		})
+
+		$("form").submit(function(){
+			$(".auth").blur();
+			return false;
+		})
+	</script></html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript"  src="jquery-1.8.3.min.js"></script>
+	<style type="text/css">
+			div{
+				position: absolute;
+				background-color: green;
+				width: 100px;
+				height: 100px;
+			}
+	</style>
+</head>
+<body>
+		<button>click</button>
+		<button id="sp">stop</button>
+		<div>
+				<span>hello</span>
+		</div>
+		
+</body>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+			$("button").click(function sd(){
+			
+				$("div").animate({left:"500px"},200);               //调节速度不要加引号
+				$("div").animate({top:"500px"},200);  
+				$("div").animate({left:"100px"},200);  
+				$("div").animate({top:"100px"},200);  
+				// $("div").animate({fontSize:"100px"});
+
+			});
+			
+			setInterval(click(function sd(){}),1000);
+			});
+			// $("#sp").click(function(){
+			// 	$("div").animate().stop();
+			// });
+
+				
+			
+
+		</script>
+</html>

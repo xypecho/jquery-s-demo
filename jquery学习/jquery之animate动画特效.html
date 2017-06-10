@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript"  src="jquery-1.8.3.min.js"></script>
+	<style type="text/css">
+		img{
+			width: 30%;
+			position: absolute;
+		}
+		button{
+			width: 40px;
+			left: 300px;
+			float: right;
+		}
+
+	</style>
+</head>
+<body>
+		<div>
+		<img src="t.jpg">
+		<button>click</button>
+		</div>
+		
+</body>
+		<script type="text/javascript">
+			$("button").click(function(){
+				// $(this).animate({left:"400px",width:"50%",},"fast");        //属性面前加+=  可以一直点击,后面可以加fast或者slow调节动画速度
+				// $("img").animate({width:"toggle"});     //toggle在这里指点击出现又消失
+				$("img").animate({width:"300px"},"slow");
+				$("img").animate({height:"300px"},"slow");
+				$("img").animate({width:"900px"},"slow");
+				$("img").animate({+=height:"100px"},"slow");	//写多个animate可以形成动画效果
+			});
+
+
+		</script>
+</html>

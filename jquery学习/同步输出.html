@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.main{
+			width: 1200px;
+			height: 300px;
+			
+			margin: 0 auto;
+		}
+
+		.left{
+			width: 580px;
+			height: 100%;
+			/*background-color: red;*/
+			border:  3px  dashed #ccc;
+			float: left;
+		}
+		.right{
+			width: 580px;
+			height: 100%;
+			/*background-color: blue;*/
+			border:  3px  dashed #ccc;
+			float: right;
+		}
+		textarea{
+			width: 500px;
+			height: 80px;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="left">
+			<form action="">
+				<p>用户名：</p>
+				<input type="txtt" name=""  placeholder="xypecho"  id="uid">
+				<p>密码：</p>
+				<input type="text" name=""  placeholder="*********"  id="aid">
+				<p>留言：</p>
+				<textarea  id="sid">
+					
+
+
+				</textarea>
+			</form>
+
+		</div>
+		
+
+		<div class="right">
+			<p>用户名:</p>
+			<p id="uid2"></p>
+
+			<p>密码：</p>
+			<p id="aid2"></p>
+			
+			<p>留言：</p>
+			<p id="sid2"></p>
+		
+		</div>
+
+
+	</div>
+</body>
+		<script type="text/javascript">
+			uidobj=document.getElementById("uid");
+			uid2obj=document.getElementById("uid2");
+			aidobj=document.getElementById("aid");
+			aid2obj=document.getElementById("aid2");
+			sidobj=document.getElementById("sid");
+			sid2obj=document.getElementById("sid2");
+			uidobj.onkeyup=function(){
+				val=this.value;
+				uid2obj.innerHTML=val;
+
+			}
+			aidobj.onkeyup=function(){
+				val=this.value;
+				aid2obj.innerHTML=val;
+
+			}
+			sidobj.onkeyup=function(){
+				val=this.value;
+				sid2obj.innerHTML=val;
+
+			}
+		</script>
+
+
+
+</html>

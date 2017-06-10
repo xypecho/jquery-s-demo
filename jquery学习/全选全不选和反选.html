@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+		<p>你的爱好：</p>
+		<label>
+				<input type="checkbox" name="">篮球
+		</label>
+		<label>
+				<input type="checkbox" name="">足球
+		</label>
+		<label>
+				<input type="checkbox" name="">羽毛球
+		</label>
+		<label>
+				<input type="checkbox" name="">乒乓球
+		</label>
+		<label>
+				<input type="checkbox" name="">游泳
+		</label>
+		<label>
+				<input type="checkbox" name="">跑步
+		</label>
+	</form>
+	<p>
+		<button id="all">全选</button>
+		<button  id="notall">全不选</button>
+		<button  id="unall">反选</button>
+	</p>
+</body>
+	<script type="text/javascript">
+		allobj=document.getElementById("all");
+		notallobj=document.getElementById("notall");
+		unallobj=document.getElementById("unall");
+		ip=document.getElementsByTagName("input");
+			allobj.onclick=function(){
+				for (i=0;i<ip.length;i++){
+					ip[i].checked=true;
+				}
+			}
+
+			notallobj.onclick=function(){
+				for (i=0;i<ip.length;i++){
+					ip[i].checked=false;
+				}
+			}
+
+			unallobj.onclick=function(){
+				for (i=0;i<ip.length;i++){
+					ip[i].checked=ip[i].checked?false:true;         //三元运算符
+					// if (ip[i].checked) {
+					// 	ip[i].checked=false;
+					// } else {
+					// 	ip[i].checked=true;
+					// }
+				}
+			}
+	</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript"  src="jquery-1.8.3.min.js"></script>
+	<style type="text/css">
+		h3{
+			position: absolute;
+		}
+
+	</style>
+</head>
+<body>
+	<h2>click it</h2>
+	<h3>hhh</h3>
+	<h3>hhh</h3>
+	<h3>hhh</h3>
+	<h3>hhh</h3>
+	<h3>hhh</h3>
+	<h3>hhh</h3>
+	<h3>hhh</h3>
+	<h3>hhh</h3>
+	<h3>hhh</h3>
+	<h3>hhh</h3>
+</body>
+	<script type="text/javascript">
+		$("h2").click(function(){
+			$("h3").animate({left:"200px"});              //animate可以变动h3的css属性,如需变动位置属性需先设置 position 属性设置为 relative、fixed 或 absolute！
+		});
+
+	</script>
+</html>
