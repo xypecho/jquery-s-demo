@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+</head>
+<body>
+	
+	<h1>00001</h1>
+	<h1>00002</h1>
+	<h1>00003</h1>
+	<h1>00004</h1>
+	<h1>00005</h1>
+	
+
+</body>
+<!-- <script type="text/javascript">
+	$("h1").click(function(){
+			$("h1").replaceWith("<h3>hello world</h3>");
+		});
+
+</script> -->
+<script type="text/javascript">
+		$("h1").click(function(){
+			$("<p>hello world</p>").replaceAll($(this));
+		});
+//两者语法
+</script>
+</html>

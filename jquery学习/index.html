@@ -5,34 +5,27 @@
 	<meta charset="utf-8">
 	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
 	<style type="text/css">
-		div{
-			height: 300px;
-			background:blue;
+		img{
+			width: 200px;
 		}
 	</style>
 </head>
 <body>
-	<div class="div1">
-	<h1>00001</h1>
-	<h1>00002</h1>
-	<h1>00003</h1>
-	<h1>00004</h1>
-	<h1>00005</h1>
+	<div>
+		<img src="20140901135125413.jpg690.jpg">
 	</div>
-	<hr>
-	<div class="div2">
-		
-	</div>
+	
+
 </body>
 <!-- <script type="text/javascript">
-	$(".div1 h1").click(function(){
-		$(".div2").before($(this));
-	})
+$("img").click(function(){
+	$(this).after($(this).clone());
+})
 </script> -->
 <script type="text/javascript">
-	$(".div1 h1").click(function(){
-		$(this).insertBefore($(".div2"));
-	})
-	//两个js效果一样
+$("img").click(function(){
+	$(this).after($(this).clone(true));
+})
+//clone里面加true可以使复制品继承事件
 </script>
 </html>
