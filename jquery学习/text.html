@@ -5,29 +5,28 @@
 	<meta charset="utf-8">
 	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
 	<style type="text/css">
-		div{
-			font-family:微软雅黑;
-			height: 300px;
-			background: #ff0000;
+		.main{
+			position: absolute;
+			width: 50%;
+			height: 50%;
+			background: #ccc;
+			top: 150px;
+			left: 335px;
+		}
+		img{
+			width: 100px;
+			height: 100px;
+			margin-left: 30px;
 		}
 	</style>
 </head>
 <body>
-	<div class="div1">
-		<h1>00001</h1>
-		<h1>00002</h1>
-		<h1>00003</h1>
-		<h1>00004</h1>
-		<h1>00005</h1>
-	</div>
-	<button>click it</button>
-	<div class="div2">
-		
+	<div class="main">
+		<img src="m.jpg">
+		<img src="m.jpg">
+		<img src="m.jpg">
+		<img src="m.jpg">
+		<img src="hj.jpg" style="display:none">
 	</div>
 </body>
-<script type="text/javascript">
-	$("button").click(function(){
-		$(".div1 h1").appendTo($(".div2"));
-	})
-</script>
 </html>

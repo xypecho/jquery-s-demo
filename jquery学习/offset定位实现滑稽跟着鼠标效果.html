@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+	<style type="text/css">
+		.shop{
+			width: 300px;
+			height: 300px;
+			box-shadow: 1px 1px 5px 5px red;
+			float: left;
+			margin-left: 20px;
+		}
+		.shop img{
+			width: 300px;
+			height: 300px;
+		}
+		.sp img{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="sp">
+		<img src="d.jpg" style="display:none;" class="sb">
+	</div>
+	<div class="shop">
+		<img src="m.jpg">
+	</div>
+	<div class="shop">
+		<img src="m.jpg">
+	</div>
+	<div class="shop">
+		<img src="m.jpg">
+	</div>
+	<div class="shop">
+		<img src="m.jpg">
+	</div>
+</body>
+<script type="text/javascript">
+	$(".shop").mouseenter(function(){
+		x=$(this).offset().left;
+		y=$(this).offset().top+300;
+		$(".sb").show().css({"top":y+"px","left":x+"px"});
+	})
+</script>
+</html>

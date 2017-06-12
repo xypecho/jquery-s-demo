@@ -6,26 +6,34 @@
 	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
 	<style type="text/css">
 		img{
-			width: 200px;
+			position: absolute;
 		}
 	</style>
 </head>
 <body>
-	<div>
-		<img src="20140901135125413.jpg690.jpg">
+	<div style="width: 800px;height: 400px;overflow: hidden;position: relative;" class="imglist">
+		<img src="g.jpg" style="width: 800px;height: 400px;">
+		<img src="m.jpg" style="width: 800px;height: 400px">
+		<img src="hj.jpg" style="width: 800px;height: 400px">
+		<img src="i.jpg" style="width: 800px;height: 400px">
 	</div>
-	
-
+<!-- 
+	<div class="right" style="width: 800px;height: 400px;overflow: hidden;background: red;">
+		
+	</div> -->
 </body>
-<!-- <script type="text/javascript">
-$("img").click(function(){
-	$(this).after($(this).clone());
-})
-</script> -->
-<script type="text/javascript">
-$("img").click(function(){
-	$(this).after($(this).clone(true));
-})
-//clone里面加true可以使复制品继承事件
-</script>
+	<script type="text/javascript">
+		// $("img").click(function(){
+		// 	$(this).clone().prependTo($(".right"));
+		// 	$(this).hide();
+
+		// })
+		
+		$(".imglist").hide().next().show();
+
+		// $(".imglist img").each(function(){
+		// 	$(".imglist img").animate({"left":"800px"},10000);
+		// })
+		
+	</script>
 </html>
