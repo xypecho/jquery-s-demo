@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+	<style type="text/css">
+		.main{
+			width: 900px;
+			height: 400px;
+			position: absolute;
+			background: #ccc;
+			top: 10%;
+			left: 10%;
+		}
+		.ig{
+			width: 150px;
+			height: 150px;
+			float: left;
+			margin-left: 40px;
+			overflow: hidden;
+			
+		}
+		.hj{
+			position: absolute;
+			display: none;
+			border-radius: 256px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="hj">
+			<img src="hj.jpg" style="width: 200px;height: 200px">
+		</div>
+		<div class="img ig">
+			<img src="m.jpg">
+		</div>
+		<div class="img ig">
+			<img src="t.jpg">
+		</div>
+		<div class="img ig">
+			<img src="i.jpg">
+		</div>
+		<div class="img ig">
+			<img src="g.jpg">
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(".ig").mouseenter(function(){
+		x=$(this).position().left;
+		 y=$(this).position().top+150;
+		 $(".hj").show().css({"top":y+"px","left":x+"px"})
+	})
+</script>
+</html>

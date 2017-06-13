@@ -5,9 +5,6 @@
 	<meta charset="utf-8">
 	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
 	<style type="text/css">
-		*{
-			padding: 0px;
-		}
 		.main{
 			width: 1200px;
 			height: 480px;
@@ -25,7 +22,7 @@
 			line-height: 40px;
 			color: #fff;
 			cursor: pointer;
-			text-align: center;
+
 		}
 		.left ul li:hover{
 			background: #fff;
@@ -71,13 +68,11 @@
 </body>
 	<script type="text/javascript">
 		$(".right").hide();
-	$(".left li").mouseenter(function(){
-		lt=$(this).position().left;
-		tp=$(this).position().top;
+		$(".left li").mouseenter(function(){
 		ip=$(this).index();
-		$(".right").eq(ip).css({"display":"block","top":tp+"px"});
+		$(".right").eq(ip).show();
 		$(".right").not($(".right").eq(ip)).hide();
-	})
+		})
 		$(".left li").mouseleave(function(){
 			$(".right").hide();
 		})
