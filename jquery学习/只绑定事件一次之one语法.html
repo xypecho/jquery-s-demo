@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+	<style type="text/css">
+		img{
+			width: 500px;
+			height: 300px;
+		}
+	</style>
+</head>
+<body>	
+	<img src="m.jpg">
+	<hr>
+	<button>添加鼠标事件</button>
+	<button>移除鼠标事件</button>
+</body>
+<script type="text/javascript">
+$("button").eq(0).click(function(){
+			i=0;
+		$("img").one("click",function(){
+			if (i%2==0) {
+				this.src="i.jpg";
+			} else {
+				this.src="m.jpg";
+			}
+			i++;
+		});
+});
+</script>
+</html>

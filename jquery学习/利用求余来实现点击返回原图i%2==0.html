@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+</head>
+<body>	
+	<img src="m.jpg">
+</body>
+<script type="text/javascript">
+		i=0;
+	$("img").click(function(){
+		if (i%2==0){
+			this.src="i.jpg";
+		}else {
+			this.src="m.jpg";
+		};
+			i++;
+	});
+</script>
+</html>

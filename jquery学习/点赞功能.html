@@ -13,13 +13,12 @@
 	<script type="text/javascript">
 			i=0;
 		$("button").click(function(){
-			if (i%2==0) {
+			if (i==0) {
 				$(this).css({"background":"red","color":"#fff"});
 				val=parseInt($(".match").html())+1;
 				$(".match").html(val);
 			} else {
-				$(this).css({"background":"buttonface","color":"buttontext"});
-				$(".match").html(val-1);
+				return false;
 			};
 			i++;
 		})

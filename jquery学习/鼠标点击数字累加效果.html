@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+	<style type="text/css">
+		img{
+			width: 500px;
+			height: 300px;
+		}
+	</style>
+</head>
+<body>	
+	<span>+1s</span>
+	<hr>
+	<button>添加鼠标事件</button>
+	
+</body>
+<script type="text/javascript">
+$("button").click(function(){
+	val=parseInt($("span").html())+1;
+	$("span").html(val);
+})
+</script>
+</html>
