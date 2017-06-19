@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+</head>
+<body>
+	<div class="ig" style="position: absolute;">
+		<img src="../jquery学习/hj.jpg" style="width: 200px">
+	</div>
+</body>
+	<script type="text/javascript">
+
+		function drag(obj){
+			obj.bind("mousedown",start)
+			function start(event){
+				deletx=event.clientX-obj.offset().left;
+				delety=event.clientY-obj.offset().top;
+				$(document).bind("mousemove",move);
+				$(document).bind("mouseup",stop);
+				return false;
+			}
+			function move(event){
+				x=event.clientX-deletx;
+				y=event.clientY-delety;
+				obj.css({"top":y+"px","left":x+"px"})
+				return false;
+			}
+			function stop(event){
+				$(document).unbind("mousedown",start);
+				$(document).unbind("mousemove",move);
+			}		
+		}				//去掉两个return false之后，一点击。图片则一直跟着鼠标
+		obj=$(".ig");
+		drag(obj);
+	</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+</head>
+<body>
+	<div>
+		<ul style="position: absolute;">
+			<li>菜单</li>
+			<li>菜单</li>
+			<li>菜单</li>
+			<li>菜单</li>
+			<li>菜单</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+	$(window).contextmenu(function(){             //contextmenu为鼠标右击事件
+	x=event.clientX;
+	y=event.clientY;
+		$("ul").css({"left":x+"px","top":y+"px"});
+		return false;
+	})
+</script>
+</html>
