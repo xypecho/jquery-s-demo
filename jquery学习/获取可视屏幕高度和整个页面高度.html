@@ -110,7 +110,11 @@
 <script type="text/javascript">
 	// w=$(window).height();      //获取屏幕可视区域的高
 	// dw=$(document).height();	//获取整个页面的高
+	$(window).scroll(function(){
+		h=$(window).scrollTop();
 	
-	alert(dw);
+	document.title=h;
+	})
+	
 </script>
 </html>

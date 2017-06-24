@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+</head>
+<body>
+	<h1>click</h1>
+	<p>hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world</p>
+</body>
+<script type="text/javascript">
+	$("h1").click(function(){
+		d=$("h1").next().css("display");
+	if (d=="block") {
+		$("h1").next().slideUp(1000);
+	} else {
+		$("h1").next().slideDown(1000);
+	}
+	})
+	
+</script>
+</html>

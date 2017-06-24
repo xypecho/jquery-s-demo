@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+</head>
+<body>
+	<input type="" name="">
+</body>
+<script type="text/javascript">
+	$("input").blur(function(){
+		// str="           nameqqqqq1";
+		str=$("input").val();
+	if ($.trim(str).length<6) {
+		alert("密码至少6位数")
+	} else {
+		alert("密码符合要求")
+	}
+	})
+	
+</script>
+</html>
